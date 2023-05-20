@@ -1,0 +1,165 @@
+html, body {
+    height: 100%;
+    background-image:url('Images/cartographer.webp');
+    background-attachment:fixed;
+  
+    --gray1: #666;
+    --gray2: #555;
+    --gray3: #ccc;
+    --darkgray: #282828;
+    --black: #1d1d1d;
+    --white1: #f1f1f1;
+    --white2: #fff;
+    --red: #b73636;
+    --darkred: #922c2c;
+    --normal: #A8A77A;
+      --fire: #EE8130;
+      --water: #6390F0;
+      --electric: #F7D02C;
+      --grass: #7AC74C;
+      --ice: #96D9D6;
+      --fighting: #C22E28;
+      --poison: #A33EA1;
+      --ground: #E2BF65;
+      --flying: #A98FF3;
+      --psychic: #F95587;
+      --bug: #A6B91A;
+      --rock: #B6A136;
+      --ghost: #735797;
+      --dragon: #6F35FC;
+      --dark: #705746;
+      --steel: #B7B7CE;
+      --fairy: #D685AD;
+  }
+  h1 { font-family:"Nunito Sans"; font-size:30px; color:var(--gray1); margin-left:1vw; font-weight:800; }
+  h2 { font-family:"Nunito Sans"; font-size:15px; color:var(--gray1); margin-left:2vw; font-weight:700; font-style:italic; margin-top:-1vh; }
+  blockquote { background-color:var(--white1); padding:1em; border-radius:20px; }
+  h3 { font-family:"Nunito Sans"; font-size:25px; color:var(--gray1); margin-left:1vw; font-weight:800; }
+  blockquote b { font-size:50px; color:var(--gray2); float:left; margin:-3vh -2vw; }
+  ul { list-style-type:none; }
+  ul li { margin:1vh 1vw; background-color:var(--white1); padding:.5em; border-radius:10px; display:block; }
+  ul li:before { margin: 0 2vw 0 -3vw; content:'\ec17'; font-family:'cappuccicons'; color:var(--gray2); }
+  
+  #headerbox { width:35vw; background-color:var(--white2); margin:auto; margin-top:-20vh; border-radius:20px; position:relative; padding-bottom: 2vh; }
+  #container { margin:auto; width:80vw; position:relative; background-image:url('Images/papyrus.webp');z-index:1; }
+  #content { width:80vw; margin:auto; padding-bottom: 10vh; text-align:justify; position:relative; }
+  
+  .textcontent { width:60vw; margin:auto; background-color:var(--white2); padding:10px; border-radius:20px; }
+  .textcontent-text { text-align:justify; width:55vw; margin:auto; color:var(--gray1); font-family:"Nunito Sans"; font-size:16px; font-weight:400; padding:2vh 0 2vh 0; }
+  .textcontent-text a { font-family:"Nunito Sans"; font-size:16px; font-weight:700; color:var(--red); text-decoration:none; transition:.5s all; }
+  .textcontent-text a:hover, .textcontent-text a:focus, .textcontent-text a:active { color:var(--darkred); }
+  .textcontent-text img { max-width:40vw; border:5px solid var(--darkgray); margin:20px; }
+  .nav { width:80vw; height: 30px; background-color:var(--white2);color:var(--gray3); top:0; position:fixed; padding-top:10px; z-index:100; }
+  .nav a, nav a:visited { color: var(--gray3); font-size:16px; font-family:"Nunito Sans"; font-weight:700; display:inline-block; text-decoration:none; transition:color .5s ease-in; }
+  .nav a:hover, nav a:focus, nav a:active { color:var(--red); }
+  .active-link a { color:var(--red); }
+  .gap { width:2vw; display:inline-block; }
+  .dropdown { position: relative; display: inline-block; }
+  .dropdown-content { width:calc(100% + 2vw); visibility:hidden; opacity:0; transition: visibility 0s linear, opacity 0.3s ease-in; position: absolute; background-color: var(--white2); z-index: 100; margin-left:-1vw; }
+  .dropdown-content a { color: var(--gray3); text-decoration: none; display: block; font-size:14px; padding:.5vh 0 .5vh .5vw; transition:all .3s ease-in; }
+  .dropdown-content a:first-child { padding-top:1vh; }
+  .dropdown-content a:last-child { padding-bottom:1vh; }
+  .dropdown-content i { font-size:10px; }
+  .dropdown:hover .dropdown-content { visibility:visible; opacity:1; }
+  .dropdown:hover .dropbtn { color: var(--red); }
+  .dropdown-content a:hover { margin-left:1vw; }
+  .headerbox-text { text-align:justify; width:30vw; margin: auto; padding-top:.5vh; font-family:"Nunito Sans"; font-weight:400; font-size:16px; color:var(--gray1); }
+  .headerbox-text p { width:calc(100% - 5vw);margin-left:-.5vw; }
+  .leftrad { display:none; } 
+  .rightrad { display:none; } 
+  
+  /* Ideal Natures & Breeding Items & Training Subpages */
+  .natures { display:grid; grid-template-columns: auto auto; justify-content: center; column-gap: 10vw; }
+  .held-items, .vitamins { display:grid; grid-template-columns: auto; justify-content: center; column-gap: 10vw; }
+  .natures table, .held-items table, vitamins table { width:100%; border-spacing:0; border-collapse: collapse; }
+  .natures th, .held-items th, .vitamins th { background-color:var(--white1); padding:10px; border:1px solid #ccc; white-space: nowrap; margin:0px; }
+  .natures tr, .held-items tr, .vitamins tr { text-align:justify; }
+  .natures td, .held-items td, .vitamins td { padding:5px 10px 5px 10px; text-align:center; }
+  
+  /* Starter Teams Subpage */
+  .team-container { display:flex; flex-direction: row; justify-content: space-between; flex-wrap: nowrap; }
+  .pokemon-team { text-align:left; margin:0 10px 0 10px; font-size:15px; }
+  .pokemon-team h2 { text-align:center; font-size:20px; font-weight:800; font-style:normal; margin:auto; }
+  .pokemon-team h3 { text-align:center; font-size:15px; margin:auto; }
+  .pokemon-team img { border:none; }
+  
+  /* Team-Building */
+  .team-container { display:flex; flex-direction: row; justify-content: space-between; flex-wrap: nowrap; }
+  .pokeimg { text-align:center; margin:0 15px 0 15px; }
+  .pokeimg img { border:none; max-height:200px; }
+  
+  /* Mobile */
+  @media screen and (max-width: 480px) {
+    .team-container { flex-wrap:wrap; }
+    #headerbox { width:70vw; margin-bottom: 5vh; }
+    .headerbox-text { width:85%; }
+    h1 { font-size: 18px; }
+    h2 { font-size: 14px; }
+    h3 { font-size: 16px; }
+    ul { display:inline-flex; gap:15px; margin: 0 -15px 0 -15px; width: calc(90% + 15px); }
+    ul li { background-color:var(--white1); padding:.5em; border-radius:10px; display:inline-block; width:100%; }
+    ul li:before { margin: 0 2vw 0 -6vw; content:'\ec17'; font-family:'cappuccicons'; color:var(--gray2); }
+    .textcontent-text img { max-width:80%; }
+    .textcontent-text { font-size:14px; width:70vw; }
+    .headerbox-text p { width:100%; font-size:14px; }
+    .pokeball { display:none; }
+    .natures { display:block; }
+    body { background-image:none; background-color:var(--black); padding:0; margin:0; }
+    #container { width:100vw; padding-left:0px; }
+    .nav { width:100vw; height:80px; background-color:var(--black); padding-left:0; }
+    #header { margin-top:0px; background-size:150% auto; background-position:100% 30%; }
+    #content { width:80vw; }
+    .textcontent { width:80vw; }
+    .leftrad { display:block; position:fixed; top:90px; left:0; width:50px; height:50px; border-top-left-radius:50%; background:transparent; box-shadow: -5px -7px 0px 5px var(--black); z-index:100; } 
+    .rightrad { display:block; position:fixed; top:90px; right:0; width:50px; height:50px; border-top-right-radius:50%; background:transparent; box-shadow:5px -7px 0 5px var(--black); }
+    .nav a, .nav a:visited { font-family:"Montserrat"; font-weight:700; font-size:7px; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-top:5px; }
+    .nav a i { display:none; }
+    a[href*="index.html"]::before { content:'\eb0d'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="getting-started.html"] { max-width:50px; }
+    a[href*="getting-started.html"]::before { content:'\ea58'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="team-building.html"] { max-width:50px; }
+    a[href*="team-building.html"]::before { content:'\eaf9'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="breeding.html"]::before { content:'\ea7e'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="training.html"]::before { content:'\eae6'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="preparation-strategy.html"] { max-width:60px; }
+    a[href*="preparation-strategy.html"]::before { content:'\e9fd'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="battling.html"]::before { content:'\ec17'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+  }
+  
+  /* Tablet */
+  @media screen and (min-width: 481px) and (max-width:768px)  {
+    .team-container { flex-wrap:wrap; }
+    #headerbox { width:70vw; margin-bottom: 5vh; }
+    .headerbox-text { width:85%; }
+    h1 { font-size: 18px; }
+    h2 { font-size: 14px; }
+    h3 { font-size: 16px; }
+    ul { display:inline-flex; gap:15px; margin: 0 -15px 0 -15px; width: calc(90% + 15px); }
+    ul li { background-color:var(--white1); padding:.5em; border-radius:10px; display:inline-block; width:100%; }
+    ul li:before { margin: 0 2vw 0 -6vw; content:'\ec17'; font-family:'cappuccicons'; color:var(--gray2); }
+    .textcontent-text img { max-width:80%; }
+    .textcontent-text { font-size:14px; width:70vw; }
+    .headerbox-text p { width:100%; font-size:14px; }
+    .pokeball { display:none; }
+    .natures { display:block; }
+    body { background-image:none; background-color:var(--black); padding:0; margin:0; }
+    #container { width:100vw; padding-left:0px; }
+    .nav { width:100vw; height:80px; background-color:var(--black); padding-left:0; text-align:center; }
+    #header { margin-top:0px; background-size:150% auto; background-position:100% 30%; }
+    #content { width:80vw; }
+    .textcontent { width:80vw; }
+    .leftrad { display:block; position:fixed; top:90px; left:0; width:50px; height:50px; border-top-left-radius:50%; background:transparent; box-shadow: -5px -7px 0px 5px var(--black); z-index:100; } 
+    .rightrad { display:block; position:fixed; top:90px; right:0; width:50px; height:50px; border-top-right-radius:50%; background:transparent; box-shadow:5px -7px 0 5px var(--black); }
+    .nav a, .nav a:visited { font-family:"Montserrat"; font-weight:700; font-size:7px; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-top:5px; }
+    .nav a i { display:none; }
+    a[href*="index.html"]::before { content:'\eb0d'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="getting-started.html"] { max-width:50px; }
+    a[href*="getting-started.html"]::before { content:'\ea58'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="team-building.html"] { max-width:50px; }
+    a[href*="team-building.html"]::before { content:'\eaf9'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="breeding.html"]::before { content:'\ea7e'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="training.html"]::before { content:'\eae6'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="preparation-strategy.html"] { max-width:60px; }
+    a[href*="preparation-strategy.html"]::before { content:'\e9fd'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+    a[href*="battling.html"]::before { content:'\ec17'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+  }
