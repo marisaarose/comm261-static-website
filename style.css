@@ -39,6 +39,7 @@ html, body {
   ul { list-style-type:none; }
   ul li { margin:1vh 1vw; background-color:var(--white1); padding:.5em; border-radius:10px; display:block; }
   ul li:before { margin: 0 2vw 0 -3vw; content:'\ec17'; font-family:'cappuccicons'; color:var(--gray2); }
+  img { max-width:100%; }
   
   #headerbox { width:35vw; background-color:var(--white2); margin:auto; margin-top:-20vh; border-radius:20px; position:relative; padding-bottom: 2vh; }
   #container { margin:auto; width:80vw; position:relative; background-image:url('Images/papyrus.webp');z-index:1; }
@@ -49,7 +50,7 @@ html, body {
   .textcontent-text a { font-family:"Nunito Sans"; font-size:16px; font-weight:700; color:var(--red); text-decoration:none; transition:.5s all; }
   .textcontent-text a:hover, .textcontent-text a:focus, .textcontent-text a:active { color:var(--darkred); }
   .textcontent-text img { max-width:40vw; border:5px solid var(--darkgray); margin:20px; }
-  .nav { width:80vw; height: 30px; background-color:var(--white2);color:var(--gray3); top:0; position:fixed; padding-top:10px; z-index:100; }
+  .nav { width:100vw; height: 30px; background-color:var(--white2);color:var(--gray3); top:0; position:fixed; padding-top:10px; z-index:100; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
   .nav a, nav a:visited { color: var(--gray3); font-size:16px; font-family:"Nunito Sans"; font-weight:700; display:inline-block; text-decoration:none; transition:color .5s ease-in; }
   .nav a:hover, nav a:focus, nav a:active { color:var(--red); }
   .active-link a { color:var(--red); }
