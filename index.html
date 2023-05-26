@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">  
   <script src="//pull.cappuccicons.com/cpf.js"></script> 
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -84,8 +85,411 @@ The Pokémon video games have a simple premise that all follow the same storylin
 
           The <i>bare minimum requirement</i> you'll need to get the most out of this guide is to have beaten at least one Pokémon game, or at least played a few hours of one. Basic familiarity with the turn-based format, the different types of moves available to you (damage versus status/condition-inflicting), and type effectiveness are essential.<br>
 
-          <div style="text-align:center;"><img src="Images/typechart.jpg"><br>
-          <i>Description: A chart displaying all 18 Pokémon types, with the types they're weak against listed on the left side and the types they're strong against listed on the right.</i></div>
+          <div class="spacing"></div>
+
+          <table id="types">
+            <tbody>
+              <tr>
+                <th><div><span style="color:#282828;">Defending →<br>Attacking ↓</span></div></th>
+                <th class="rotate"><div><span>Normal</span></div></th>
+                <th class="rotate"><div><span>Fire</span></div></th>
+                <th class="rotate"><div><span>Water</span></div></th>
+                <th class="rotate"><div><span>Grass</span></div></th>
+                <th class="rotate"><div><span>Electric</span></div></th>
+                <th class="rotate"><div><span>Ice</span></div></th>
+                <th class="rotate"><div><span>Fighting</span></div></th>
+                <th class="rotate"><div><span>Poison</span></div></th>
+                <th class="rotate"><div><span>Ground</span></div></th>
+                <th class="rotate"><div><span>Flying</span></div></th>
+                <th class="rotate"><div><span>Psychic</span></div></th>
+                <th class="rotate"><div><span>Bug</span></div></th>
+                <th class="rotate"><div><span>Rock</span></div></th>
+                <th class="rotate"><div><span>Ghost</span></div></th>
+                <th class="rotate"><div><span>Dragon</span></div></th>
+                <th class="rotate"><div><span>Dark</span></div></th>
+                <th class="rotate"><div><span>Steel</span></div></th>
+                <th class="rotate"><div><span>Fairy</span></div></th>
+              </tr>
+              <tr>
+                <th><div><span>Normal</span></div></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Fire</span></div></th>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td>2</td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Water</span></div></th>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Grass</span></div></th>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Electric</span></div></th>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Ice</span></div></th>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Fighting</span></div></th>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td>½</td>
+                <td>2</td>
+                <td>0</td>
+                <td></td>
+                <td>2</td>
+                <td>2</td>
+                <td>½</td>
+              </tr>
+              <tr>
+                <th><div><span>Poison</span></div></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th><div><span>Ground</span></div></th>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>0</td>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Flying</span></div></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Psychic</span></div></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>0</td>
+                <td>½</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Bug</span></div></th>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td>½</td>
+              </tr>
+              <tr>
+                <th><div><span>Rock</span></div></th>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Ghost</span></div></th>
+                <td>0</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th><div><span>Dragon</span></div></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th><div><span>Dark</span></div></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td>½</td>
+              </tr>
+              <tr>
+                <th><div><span>Steel</span></div></th>
+                <td></td>
+                <td>½</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>½</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th><div><span>Fairy</span></div></th>
+                <td></td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>2</td>
+                <td>2</td>
+                <td>½</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
 
           <blockquote><b>“</b> Not every battle gone wrong is a reflection of your skill.</blockquote>
           
@@ -95,6 +499,40 @@ The Pokémon video games have a simple premise that all follow the same storylin
       Without further ado, head to the Getting Started page, or click any of the links on the navigation menu above if you'd prefer to start somewhere else.<br><br>
 
           <a href="Pages/getting-started.html">» Getting Started</a>
+
+          
+        </div>
+        </div>
+
+        <div class="textcontent comment">
+          <div class="textcontent-text">
+            <h1 style="margin-left:2vw;">Comment Form</h1>
+
+            <form id="comment">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+              <label for="color">Favorite Color:</label>
+              <input type="color" id="color" name="color">
+              <label for="region">Favorite Pokémon Region:</label>
+              <select id="region" name="region">
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+                <option value="hoenn">Hoenn</option>
+                <option value="sinnoh">Sinnoh</option>
+                <option value="unova">Unova</option>
+                <option value="kalos">Kalos</option>
+                <option value="alola">Alola</option>
+                <option value="galar">Galar</option>
+                <option value="paldea">Paldea</option>
+              </select>
+              <label for="battle">Do you think you'd like competitive battle?</label>
+              <input type="radio" id="battle-yes" name="battle" value="Yes"> Yes
+              <input type="radio" id="battle-no" name="battle" value="No"> No<br>
+              <label for="comment">Comment:</label>
+              <textarea id="comment" name="comment"></textarea>
+              <input type="submit" id="submit" name="submit" value="Submit">
+            </form>
+          </div>
         </div>
       </div>
     </div>

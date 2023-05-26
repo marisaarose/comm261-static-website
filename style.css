@@ -6,6 +6,7 @@ html, body {
     --gray1: #666;
     --gray2: #555;
     --gray3: #ccc;
+    --gray4: #eee;
     --darkgray: #282828;
     --black: #1d1d1d;
     --white1: #f1f1f1;
@@ -46,6 +47,7 @@ html, body {
   #content { width:80vw; margin:auto; padding-bottom: 10vh; text-align:justify; position:relative; }
   
   .textcontent { width:60vw; margin:auto; background-color:var(--white2); padding:10px; border-radius:20px; }
+  .textcontent.comment { margin-top:25px; }
   .textcontent-text { text-align:justify; width:55vw; margin:auto; color:var(--gray1); font-family:"Nunito Sans"; font-size:16px; font-weight:400; padding:2vh 0 2vh 0; }
   .textcontent-text a { font-family:"Nunito Sans"; font-size:16px; font-weight:700; color:var(--red); text-decoration:none; transition:.5s all; }
   .textcontent-text a:hover, .textcontent-text a:focus, .textcontent-text a:active { color:var(--darkred); }
@@ -68,6 +70,28 @@ html, body {
   .headerbox-text p { width:calc(100% - 5vw);margin-left:-.5vw; }
   .leftrad { display:none; } 
   .rightrad { display:none; } 
+  .spacing { height:100px; }
+
+  /* Types Chart */
+  #types { border-collapse: collapse; border:0px solid var(--gray3); margin:auto; }
+  #types tr:nth-child(2n) { background-color:var(--gray4); }
+  #types tr td:first-child { background-color: transparent; }
+  #types th { white-space:nowrap; position:relative; background-color: var(--white2); }
+  #types th > div { text-align:right; width:100%; }
+  #types th > div > span { width:95px; padding:0 5px; background-color: var(--darkgray); color:var(--white2); display:inline-block; margin-right:5px; }
+  #types th.rotate > div { position:absolute; bottom:0; left:0; text-align:left; transform:translateX(25px) rotate(-90deg); transform-origin: 0% 100%; width:100%; }
+  #types th.rotate > div > span { position:absolute; bottom:0; left:5px; background-color: var(--darkgray); color:var(--white2); width:95px; padding:0 5px; }
+  #types td { border:1px solid var(--gray3); min-width:25px; text-align:center; margin:0; color:var(--white2); font-weight:700; }
+
+  /* Comment Form */
+  form input[type="text"], form textarea { background-color: var(--white2); border: 1px solid var(--gray3); border-radius: 3px; width: 100%; padding: 7px; font-size: 14px; margin:5px 0 15px 0; }
+  form input[type="color"], form select { width:100%; margin:5px 0 15px 0; }
+  form input[type="radio"] { margin:5px 0 15px 0; }
+  form input[type="submit"] { padding:10px; color:var(--white2); background-color:var(--red); margin-left:20px; font-family:"Nunito Sans"; border-radius:5px; border:1px solid var(--darkred); font-weight:700; transition:all .3s ease-in; }
+  form input[type="submit"]:hover { background-color:var(--darkred); cursor:pointer; }
+  form select { padding:5px; font-size: 14px; background-color: var(--white2); border:1px solid var(--gray3); border-radius:3px; }
+  form textarea { min-height:100px; }
+  form label { line-height: 20px; font-size:18px; display:block; padding:0 10px; }
   
   /* Ideal Natures & Breeding Items & Training Subpages */
   .natures { display:grid; grid-template-columns: auto auto; justify-content: center; column-gap: 10vw; }
