@@ -32,15 +32,15 @@ html, body {
       --steel: #B7B7CE;
       --fairy: #D685AD;
   }
-  h1 { font-family:"Nunito Sans"; font-size:30px; color:var(--gray1); margin-left:1vw; font-weight:800; }
-  h2 { font-family:"Nunito Sans"; font-size:15px; color:var(--gray1); margin-left:2vw; font-weight:700; font-style:italic; margin-top:-1vh; }
-  blockquote { background-color:var(--white1); padding:1em; border-radius:20px; }
-  h3 { font-family:"Nunito Sans"; font-size:25px; color:var(--gray1); margin-left:1vw; font-weight:800; }
-  blockquote b { font-size:50px; color:var(--gray2); float:left; margin:-3vh -2vw; }
-  ul { list-style-type:none; }
-  ul li { margin:1vh 1vw; background-color:var(--white1); padding:.5em; border-radius:10px; display:block; }
-  ul li:before { margin: 0 2vw 0 -3vw; content:'\ec17'; font-family:'cappuccicons'; color:var(--gray2); }
-  img { max-width:100%; }
+  #container h1 { font-family:"Nunito Sans"; font-size:30px; color:var(--gray1); margin:1vw 0 1vw 1vw; font-weight:800; }
+  #container h2 { font-family:"Nunito Sans"; font-size:15px; color:var(--gray1); margin:1vw 0 1vw 2vw; font-weight:700; font-style:italic; margin-top:-1vh; }
+  #container blockquote { background-color:var(--white1); padding:1em; border-radius:20px; }
+  #container h3 { font-family:"Nunito Sans"; font-size:25px; color:var(--gray1); margin:1vw 0 1vw 1vw; font-weight:800; }
+  #container blockquote b { font-size:50px; color:var(--gray2); float:left; margin:-3vh -2vw; }
+  #container ul { list-style-type:none; }
+  #container ul li { margin:1vh 1vw; background-color:var(--white1); padding:.5em; border-radius:10px; display:block; }
+  #container ul li:before { margin: 0 2vw 0 -3vw; content:'\ec17'; font-family:'cappuccicons'; color:var(--gray2); }
+  #container img { max-width:100%; }
   
   #headerbox { width:35vw; background-color:var(--white2); margin:auto; margin-top:-20vh; border-radius:20px; position:relative; padding-bottom: 2vh; }
   #container { margin:auto; width:80vw; position:relative; background-image:url('Images/papyrus.webp');z-index:1; }
@@ -52,11 +52,11 @@ html, body {
   .textcontent-text a { font-family:"Nunito Sans"; font-size:16px; font-weight:700; color:var(--red); text-decoration:none; transition:.5s all; }
   .textcontent-text a:hover, .textcontent-text a:focus, .textcontent-text a:active { color:var(--darkred); }
   .textcontent-text img { max-width:40vw; border:5px solid var(--darkgray); margin:20px; }
-  .nav { width:100vw; height: 30px; background-color:var(--white2);color:var(--gray3); top:0; position:fixed; padding-top:10px; z-index:100; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
-  .nav a, nav a:visited { color: var(--gray3); font-size:16px; font-family:"Nunito Sans"; font-weight:700; display:inline-block; text-decoration:none; transition:color .5s ease-in; }
-  .nav a:hover, nav a:focus, nav a:active { color:var(--red); }
-  .active-link a { color:var(--red); }
-  .gap { width:2vw; display:inline-block; }
+  .navigation { width:100vw; display:flex; gap:2vw; height: 40px; background-color:var(--white2);color:var(--gray3); top:0; position:fixed; padding-top:10px; z-index:100; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
+  .navigation > a:first-child { margin-left:2vw; }
+  .navigation a, .navigation a:visited { color: var(--gray3); font-size:16px; font-family:"Nunito Sans"; font-weight:700; text-decoration:none; transition:color .5s ease-in; }
+  .navigation a:hover, .navigation a:focus, .navigation a:active { color:var(--red); }
+  .active { color:var(--red); }
   .dropdown { position: relative; display: inline-block; }
   .dropdown-content { width:calc(100% + 2vw); visibility:hidden; opacity:0; transition: visibility 0s linear, opacity 0.3s ease-in; position: absolute; background-color: var(--white2); z-index: 100; margin-left:-1vw; }
   .dropdown-content a { color: var(--gray3); text-decoration: none; display: block; font-size:14px; padding:.5vh 0 .5vh .5vw; transition:all .3s ease-in; }
@@ -78,25 +78,18 @@ html, body {
   #types tr td:first-child { background-color: transparent; }
   #types th { white-space:nowrap; position:relative; background-color: var(--white2); }
   #types th > div { text-align:right; width:100%; }
-  #types th > div > span { width:95px; padding:0 5px; background-color: var(--darkgray); color:var(--white2); display:inline-block; margin-right:5px; }
-  #types th.rotate > div { position:absolute; bottom:0; left:0; text-align:left; transform:translateX(25px) rotate(-90deg); transform-origin: 0% 100%; width:100%; }
-  #types th.rotate > div > span { position:absolute; bottom:0; left:5px; background-color: var(--darkgray); color:var(--white2); width:95px; padding:0 5px; }
-  #types td { border:1px solid var(--gray3); min-width:25px; text-align:center; margin:0; color:var(--white2); font-weight:700; }
+  #types th > div > span { width:8vw; padding:0 .5vw; background-color: var(--darkgray); color:var(--white2); display:inline-block; margin-right:.5vw; }
+  #types th.rotate > div { position:absolute; bottom:0; left:0; text-align:left; transform:translateX(2vw) rotate(-90deg); transform-origin: 0% 100%; width:100%; }
+  #types th.rotate > div > span { position:absolute; bottom:0; left:.5vw; background-color: var(--darkgray); color:var(--white2); width:8vw; padding:0 .5vw; }
+  #types td { border:1px solid var(--gray3); min-width:2vw; height:2vw; text-align:center; margin:0; color:var(--white2); font-weight:700; }
 
   /* Comment Form */
-  form input[type="text"], form textarea { background-color: var(--white2); border: 1px solid var(--gray3); border-radius: 3px; width: 100%; padding: 7px; font-size: 14px; margin:5px 0 15px 0; }
-  form input[type="color"], form select { width:100%; margin:5px 0 15px 0; }
-  form input[type="radio"] { margin:5px 0 15px 0; }
-  form input[type="submit"] { padding:10px; color:var(--white2); background-color:var(--red); margin-left:20px; font-family:"Nunito Sans"; border-radius:5px; border:1px solid var(--darkred); font-weight:700; transition:all .3s ease-in; }
-  form input[type="submit"]:hover { background-color:var(--darkred); cursor:pointer; }
-  form select { padding:5px; font-size: 14px; background-color: var(--white2); border:1px solid var(--gray3); border-radius:3px; }
-  form textarea { min-height:100px; }
-  form label { line-height: 20px; font-size:18px; display:block; padding:0 10px; }
+ 
   
   /* Ideal Natures & Breeding Items & Training Subpages */
   .natures { display:grid; grid-template-columns: auto auto; justify-content: center; column-gap: 10vw; }
   .held-items, .vitamins { display:grid; grid-template-columns: auto; justify-content: center; column-gap: 10vw; }
-  .natures table, .held-items table, vitamins table { width:100%; border-spacing:0; border-collapse: collapse; }
+  .natures table, .held-items table, .vitamins table { width:100%; border-spacing:0; border-collapse: collapse; }
   .natures th, .held-items th, .vitamins th { background-color:var(--white1); padding:10px; border:1px solid #ccc; white-space: nowrap; margin:0px; }
   .natures tr, .held-items tr, .vitamins tr { text-align:justify; }
   .natures td, .held-items td, .vitamins td { padding:5px 10px 5px 10px; text-align:center; }
@@ -114,7 +107,7 @@ html, body {
   .pokeimg img { border:none; max-height:200px; }
   
   /* Mobile */
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 500px) {
     .team-container { flex-wrap:wrap; }
     #headerbox { width:70vw; margin-bottom: 5vh; }
     .headerbox-text { width:85%; }
@@ -131,14 +124,14 @@ html, body {
     .natures { display:block; }
     body { background-image:none; background-color:var(--black); padding:0; margin:0; }
     #container { width:100vw; padding-left:0px; }
-    .nav { width:100vw; height:80px; background-color:var(--black); padding-left:0; }
+    .navigation { width:100vw; height:90px; background-color:var(--black); padding-left:0; justify-content: center; }
     #header { margin-top:0px; background-size:150% auto; background-position:100% 30%; }
     #content { width:80vw; }
     .textcontent { width:80vw; }
     .leftrad { display:block; position:fixed; top:90px; left:0; width:50px; height:50px; border-top-left-radius:50%; background:transparent; box-shadow: -5px -7px 0px 5px var(--black); z-index:100; } 
     .rightrad { display:block; position:fixed; top:90px; right:0; width:50px; height:50px; border-top-right-radius:50%; background:transparent; box-shadow:5px -7px 0 5px var(--black); }
-    .nav a, .nav a:visited { font-family:"Montserrat"; font-weight:700; font-size:7px; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-top:5px; }
-    .nav a i { display:none; }
+    .navigation a, .navigation a:visited { font-family:"Montserrat"; font-weight:700; font-size:7px; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-top:5px; }
+    .navigation a i { display:none; }
     a[href*="index.html"]::before { content:'\eb0d'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
     a[href*="getting-started.html"] { max-width:50px; }
     a[href*="getting-started.html"]::before { content:'\ea58'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
@@ -152,7 +145,7 @@ html, body {
   }
   
   /* Tablet */
-  @media screen and (min-width: 481px) and (max-width:768px)  {
+  @media screen and (min-width: 501px) and (max-width:900px)  {
     .team-container { flex-wrap:wrap; }
     #headerbox { width:70vw; margin-bottom: 5vh; }
     .headerbox-text { width:85%; }
@@ -169,14 +162,14 @@ html, body {
     .natures { display:block; }
     body { background-image:none; background-color:var(--black); padding:0; margin:0; }
     #container { width:100vw; padding-left:0px; }
-    .nav { width:100vw; height:80px; background-color:var(--black); padding-left:0; text-align:center; }
+    .navigation { width:100vw; height:90px; background-color:var(--black); padding-left:0; text-align:center; justify-content: center; }
     #header { margin-top:0px; background-size:150% auto; background-position:100% 30%; }
     #content { width:80vw; }
     .textcontent { width:80vw; }
     .leftrad { display:block; position:fixed; top:90px; left:0; width:50px; height:50px; border-top-left-radius:50%; background:transparent; box-shadow: -5px -7px 0px 5px var(--black); z-index:100; } 
     .rightrad { display:block; position:fixed; top:90px; right:0; width:50px; height:50px; border-top-right-radius:50%; background:transparent; box-shadow:5px -7px 0 5px var(--black); }
-    .nav a, .nav a:visited { font-family:"Montserrat"; font-weight:700; font-size:7px; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-top:5px; }
-    .nav a i { display:none; }
+    .navigation a, .navigation a:visited { font-family:"Montserrat"; font-weight:700; font-size:7px; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-top:5px; }
+    .navigation a i { display:none; }
     a[href*="index.html"]::before { content:'\eb0d'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
     a[href*="getting-started.html"] { max-width:50px; }
     a[href*="getting-started.html"]::before { content:'\ea58'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
@@ -187,4 +180,6 @@ html, body {
     a[href*="preparation-strategy.html"] { max-width:60px; }
     a[href*="preparation-strategy.html"]::before { content:'\e9fd'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
     a[href*="battling.html"]::before { content:'\ec17'; font-family:'cappuccicons'; display:block; font-size:25px; margin-bottom:10px; }
+
+    #types { max-width:80%; }
   }

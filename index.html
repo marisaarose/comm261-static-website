@@ -9,12 +9,12 @@
   <title>Blitz - Home</title>
 
   <style>
-    .full-width { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
     #header { background-image:url('Images/Headers/header1.png'); background-size:cover; background-position: 100% 30%; background-repeat:no-repeat; height:55vh; }
     .pokeball { background-image:url('Images/pokeball.png'); background-size:cover; width:200px; height:200px; margin:-40vh 0 20vh 51vw; position:relative; z-index:2; }
   </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet">  
@@ -24,12 +24,9 @@
 
 <body>
   <div id="container">
-  <div class="nav">
-    <div class="gap"></div>
-    <a href="index.html" style="color:var(--red);"><i class="cp cp-pokeball"></i> Home</a>
-    <div class="gap"></div>
+  <div class="navigation">
+    <a href="index.html"><i class="cp cp-pokeball"></i> Home</a>
     <a href="Pages/getting-started.html"><i class="cp cp-pokeball"></i> Getting Started</a>
-    <div class="gap"></div>
     <div class="dropdown">
       <a href="Pages/team-building.html" class="dropbtn">
         <i class="cp cp-pokeball"></i> Team-Building</a> 
@@ -38,23 +35,19 @@
         <a href="Subpages/ideal-nature.html"><i class="cp cp-chevron-right"></i> Ideal Nature</a>
       </div>
     </div>
-    <div class="gap"></div>
     <div class="dropdown">
       <a href="Pages/breeding.html" class="dropbtn"><i class="cp cp-pokeball"></i> Breeding</a>
       <div class="dropdown-content">
         <a href="Subpages/breeding-items.html"><i class="cp cp-chevron-right"></i> Breeding Items</a>
       </div>
     </div>
-    <div class="gap"></div>
     <a href="Pages/training.html"><i class="cp cp-pokeball"></i> Training</a>
-    <div class="gap"></div>
     <a href="Pages/preparation-strategy.html"><i class="cp cp-pokeball"></i> Preparation & Strategy</a>
-    <div class="gap"></div>
     <a href="Pages/battling.html"><i class="cp cp-pokeball"></i> Battling</a>
   </div>
     <div class="leftrad"></div>
     <div class="rightrad"></div>
-  <div id="header" class="full-width"></div>
+  <div id="header"></div>
   <div id="headerbox">
     <div class="headerbox-text">
       <h1>Blitz!</h1>
@@ -491,7 +484,7 @@ The Pokémon video games have a simple premise that all follow the same storylin
             </tbody>
           </table>
 
-          <blockquote><b>“</b> Not every battle gone wrong is a reflection of your skill.</blockquote>
+          <blockquote class="mt-3"><b>“</b> Not every battle gone wrong is a reflection of your skill.</blockquote>
           
 
           Finally, perhaps the most important tip in this entire guide is this: Have fun! These are games and even though many of us take them very seriously, it's important to remember that you're supposed to be having fun playing them. Anytime it's not feeling so fun is a sign you should step back and do something else for a little while. Sometimes you haven't learned enough and sometimes you're just having bad luck - not every battle gone wrong is a reflection of your skill. <br><br>
@@ -507,14 +500,19 @@ The Pokémon video games have a simple premise that all follow the same storylin
         <div class="textcontent comment">
           <div class="textcontent-text">
             <h1 style="margin-left:2vw;">Comment Form</h1>
-
             <form id="comment">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name">
-              <label for="color">Favorite Color:</label>
-              <input type="color" id="color" name="color">
-              <label for="region">Favorite Pokémon Region:</label>
-              <select id="region" name="region">
+              <div class="row">
+                <div class="col">
+                  <label for="name" class="form-label my-2">Name:</label>
+                  <input type="text" id="name" name="name" class="form-control">
+                </div>
+                <div class="col">
+                  <label for="color" class="form-label my-2">Favorite Color:</label>
+                  <input type="color" id="color" name="color" class="form-control">
+                </div>
+              </div>
+              <label for="region" class="form-label my-2">Favorite Pokémon Region:</label>
+              <select id="region" name="region" class="form-select">
                 <option value="kanto">Kanto</option>
                 <option value="johto">Johto</option>
                 <option value="hoenn">Hoenn</option>
@@ -525,12 +523,18 @@ The Pokémon video games have a simple premise that all follow the same storylin
                 <option value="galar">Galar</option>
                 <option value="paldea">Paldea</option>
               </select>
-              <label for="battle">Do you think you'd like competitive battle?</label>
-              <input type="radio" id="battle-yes" name="battle" value="Yes"> Yes
-              <input type="radio" id="battle-no" name="battle" value="No"> No<br>
-              <label for="comment">Comment:</label>
-              <textarea id="comment" name="comment"></textarea>
-              <input type="submit" id="submit" name="submit" value="Submit">
+              <label for="battle" class="form-label my-2 mt-3">Do you think you'd like competitive battle?</label>
+              <div class="form-check form-check-inline ms-2">
+                <input type="radio" id="battle-yes" name="battle" value="Yes" class="form-check-input">
+                <label class="form-check-label ms-1" for="battle-yes">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" id="battle-no" name="battle" value="No" class="form-check-input">
+                <label class="form-check-label" for="battle-no">No</label>
+              </div><br>
+              <label for="comment" class="form-label my-2">Comment:</label>
+              <textarea id="comment" name="comment" rows="3" class="form-control"></textarea>
+              <input type="submit" id="submit" name="submit" value="Submit" class="btn btn-danger mt-3">
             </form>
           </div>
         </div>
