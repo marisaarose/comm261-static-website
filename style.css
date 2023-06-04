@@ -78,10 +78,10 @@ html, body {
   #types tr td:first-child { background-color: transparent; }
   #types th { white-space:nowrap; position:relative; background-color: var(--white2); }
   #types th > div { text-align:right; width:100%; }
-  #types th > div > span { width:8vw; padding:0 .5vw; background-color: var(--darkgray); color:var(--white2); display:inline-block; margin-right:.5vw; }
+  #types th > div > span { width:8vw; padding:0 .5vw; background-color: var(--darkgray); color:var(--white2); display:inline-block; margin-right:.5vw; text-shadow:1px 1px 2px var(--gray1); }
   #types th.rotate > div { position:absolute; bottom:0; left:0; text-align:left; transform:translateX(2vw) rotate(-90deg); transform-origin: 0% 100%; width:100%; }
-  #types th.rotate > div > span { position:absolute; bottom:0; left:.5vw; background-color: var(--darkgray); color:var(--white2); width:8vw; padding:0 .5vw; }
-  #types td { border:1px solid var(--gray3); min-width:2vw; height:2vw; text-align:center; margin:0; color:var(--white2); font-weight:700; }
+  #types th.rotate > div > span { position:absolute; bottom:0; left:.5vw; background-color: var(--darkgray); color:var(--white2); width:8vw; padding:0 .5vw; text-shadow:1px 1px 2px var(--gray1); }
+  #types td { border:1px solid var(--gray3); min-width:2vw; height:2vw; text-align:center; margin:0; color:var(--white2); font-weight:700; text-shadow:1px 1px 2px var(--gray1); }
 
   /* Comments */
   .extra { text-transform:uppercase; font-size:.6em; letter-spacing:1px; }
