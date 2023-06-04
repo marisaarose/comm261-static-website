@@ -83,8 +83,8 @@ html, body {
   #types th.rotate > div > span { position:absolute; bottom:0; left:.5vw; background-color: var(--darkgray); color:var(--white2); width:8vw; padding:0 .5vw; }
   #types td { border:1px solid var(--gray3); min-width:2vw; height:2vw; text-align:center; margin:0; color:var(--white2); font-weight:700; }
 
-  /* Comment Form */
- 
+  /* Comments */
+  .extra { text-transform:uppercase; font-size:.6em; letter-spacing:1px; }
   
   /* Ideal Natures & Breeding Items & Training Subpages */
   .natures { display:grid; grid-template-columns: auto auto; justify-content: center; column-gap: 10vw; }
@@ -105,6 +105,20 @@ html, body {
   .team-container { display:flex; flex-direction: row; justify-content: space-between; flex-wrap: nowrap; }
   .pokeimg { text-align:center; margin:0 15px 0 15px; }
   .pokeimg img { border:none; max-height:200px; }
+
+  /* Type Calculator Subpage */
+  .calc-container { display:grid; grid-template-areas: 'intro intro intro intro' 'type1 type2 results results'; }
+  .intro, .type1, .type2, .results { background-color:var(--white2); padding:10px; border-radius:20px; }
+  .intro { grid-area:intro; margin:0 5vw 5vh 5vw; }
+  .type1 { grid-area:type1; margin:0 1vw 0 5vw; }
+  .type2 { grid-area:type2; }
+  .results { grid-area:results; margin:0 5vw 0 1vw; width:30vw; }
+  .calc-container .textcontent-text { width:100%; margin:0 1vw; padding-right:2vw; }
+  .intro .textcontent-text { padding-right:2vw; }
+  .selected { color:var(--white2); text-shadow: 1px 1px 2px var(--gray1); }
+  .selectable { color:var(--gray1); }
+  .results div > div { display:flex; flex-wrap:wrap; }
+  .results div > span { color:var(--white2); padding:4px; border-radius:3px; margin:3px; line-height:18px; text-shadow:1px 1px 2px var(--gray1); }
   
   /* Mobile */
   @media screen and (max-width: 500px) {
